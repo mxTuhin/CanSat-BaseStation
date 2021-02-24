@@ -1,0 +1,217 @@
+.root{
+    -fx-background-color: black;
+}
+#gauge{
+    -fxx-segment0-color: #888888;
+    -fxx-segment1-color: #f3622d;
+    -fxx-segment2-color: #fba71b;
+    -fxx-segment3-color: #57b757;
+    -fxx-segment4-color: #41a9c9;
+    -fxx-segment5-color: #4258c9;
+    -fxx-segment6-color: #9a42c8;
+    -fxx-segment7-color: #c84164;
+    -fxx-segment8-color: #ffffff;
+    -fxx-segment9-color: #aaaaaa;
+    -fxx-marker0-color: #222222;
+    -fxx-marker1-color: #222222;
+    -fxx-marker2-color: #222222;
+    -fxx-marker3-color: #222222;
+    -fxx-marker4-color: #222222;
+    -fxx-marker5-color: #222222;
+    -fxx-marker6-color: #222222;
+    -fxx-marker7-color: #222222;
+    -fxx-marker8-color: #222222;
+    -fxx-marker9-color: #222222;
+    -fxx-needle-color: #5a615f;
+    /* predefined indicators */
+    -fxx-error-indicator-visibility: hidden;
+    -fxx-error-indicator-color: red;
+    -fxx-warning-indicator-visibility: hidden;
+    -fxx-warning-indicator-color: orange;
+}
+
+#gauge .needle {
+    -fx-fill:-fxx-needle-color;
+    -fx-stroke: white;
+    -fx-stroke-line-cap: round;
+    -fx-stroke-line-join: bevel;
+}
+
+#gauge .value {
+    -fx-fill: white;
+    -fx-font-family: "Roboto Medium";
+    -fx-font-size: 64px;
+    -fx-font-weight: bold;
+}
+
+/***************************************************************************************************************
+/* predefined indicators http://www.w3.org/TR/SVG/paths.html */
+/* drawing circles in SVG: http://stackoverflow.com/questions/5737975/circle-drawing-with-svgs-arc-path/10477334#10477334 */
+
+#gauge .error-indicator {
+    visibility: -fxx-error-indicator-visibility;
+    -fx-background-color: -fxx-error-indicator-color;
+    -fx-shape: 'M 50, 50 m -50, 0 a 50,50 0 1,0 100,0 a 50,50 0 1,0 -100,0';
+    -fx-scale-shape: false;
+}
+
+#gauge .warning-indicator {
+    visibility: -fxx-warning-indicator-visibility;
+    -fx-background-color: -fxx-warning-indicator-color;
+    -fx-shape: 'M 50, 50 m -50, 0 a 50,50 0 1,0 100,0 a 50,50 0 1,0 -100,0';
+    -fx-scale-shape: false;
+}
+
+/***************************************************************************************************************
+ * This are the actual classes being assigned to the segments, they use the variables to obtain their color.
+ */
+
+#gauge .segment {
+    -fx-stroke: #888888;
+    -fx-fill: #888888;
+}
+
+#gauge .segment0 {
+    -fx-stroke: -fxx-segment0-color;
+    -fx-fill: -fxx-segment0-color;
+}
+
+#gauge .segment1 {
+    -fx-stroke: -fxx-segment1-color;
+    -fx-fill: -fxx-segment1-color;
+}
+
+#gauge .segment2 {
+    -fx-stroke: -fxx-segment2-color;
+    -fx-fill: -fxx-segment2-color;
+}
+
+#gauge .segment3 {
+    -fx-stroke: -fxx-segment3-color;
+    -fx-fill: -fxx-segment3-color;
+}
+
+#gauge .segment4 {
+    -fx-stroke: -fxx-segment4-color;
+    -fx-fill: -fxx-segment4-color;
+}
+
+#gauge .segment5 {
+    -fx-stroke: -fxx-segment5-color;
+    -fx-fill: -fxx-segment5-color;
+}
+
+#gauge .segment6 {
+    -fx-stroke: -fxx-segment6-color;
+    -fx-fill: -fxx-segment6-color;
+}
+
+#gauge .segment7 {
+    -fx-stroke: -fxx-segment7-color;
+    -fx-fill: -fxx-segment7-color;
+}
+
+#gauge .segment8 {
+    -fx-stroke: -fxx-segment8-color;
+    -fx-fill: -fxx-segment8-color;
+}
+
+#gauge .segment9 {
+    -fx-stroke: -fxx-segment9-color;
+    -fx-fill: -fxx-segment9-color;
+}
+
+/**
+ * The segment-active class can be used to modify an segment that is under the needle (this can be more than if the segments are setup in such a way).
+ */
+
+#gauge .segment-active {
+}
+
+/**
+ * The segmentX-active are assigned corresponding to the segment that is under the needle (this can be more than if the segments are setup in such a way).
+ * This is the place to associate an indicator with a segment, by adding one of these line to the appropriate class:
+ *     -fxx-error-indicator-visibility: visible; 
+ *     -fxx-warning-indicator-visibility: visible; 
+ * Interesting is it to have transparent segments, while not visible, these can become active and show an indicator.
+ 
+#gauge .segment0-active {
+}
+
+#gauge .segment1-active {
+}
+
+#gauge .segment2-active {
+}
+
+#gauge .segment3-active {
+}
+
+#gauge .segment4-active {
+}
+
+#gauge .segment5-active {
+}
+
+#gauge .segment6-active {
+}
+
+#gauge .segment7-active {
+}
+
+#gauge .segment8-active {
+}
+
+#gauge .segment9-active {
+}
+ */
+
+/***************************************************************************************************************
+ * This are the actual classes being assigned to the marker, they use the variables to obtain their color.
+ */
+
+#gauge .marker {
+    -fx-background-color: #222222;
+    -fx-shape: 'M 0 0 L -3 -6 L 3 -6 Z';
+    -fx-scale-shape: false;
+}
+
+#gauge .marker0 {
+    -fx-background-color: -fxx-marker0-color;
+}
+
+#gauge .marker1 {
+    -fx-background-color: -fxx-marker1-color;
+}
+
+#gauge .marker2 {
+    -fx-background-color: -fxx-marker2-color;
+}
+
+#gauge .marker3 {
+    -fx-background-color: -fxx-marker3-color;
+}
+
+#gauge .marker4 {
+    -fx-background-color: -fxx-marker4-color;
+}
+
+#gauge .marker5 {
+    -fx-background-color: -fxx-marker5-color;
+}
+
+#gauge .marker6 {
+    -fx-background-color: -fxx-marker6-color;
+}
+
+#gauge .marker7 {
+    -fx-background-color: -fxx-marker7-color;
+}
+
+#gauge .marker8 {
+    -fx-background-color: -fxx-marker8-color;
+}
+
+#gauge .marker9 {
+    -fx-background-color: -fxx-marker9-color;
+}

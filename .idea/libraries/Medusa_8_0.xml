@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Medusa-8.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../MedusaGuage/Medusa-8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/jfxtras-labs-samples-8.0-r6-SNAPSHOT-all.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="RXTXcomm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../GUI/lib/RXTXcomm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../GUI/lib/jfoenix-8.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../GUI/doc/jSSC-2.7.0-Release/jssc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/jxbrowser-7.3-cross-desktop-win_mac_linux/lib/jxbrowser-javafx-7.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/jxbrowser-7.3-cross-desktop-win_mac_linux/lib/jxbrowser-7.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/jxbrowser-7.3-cross-desktop-win_mac_linux/lib/jxbrowser-swing-7.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MedusaGuage/Medusa-8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/src/jxbrowser-7.3-cross-desktop-win_mac_linux/javadoc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>
